@@ -1,0 +1,19 @@
+@use "sass:math";
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech&display=swap");
+@import "null_style";
+
+$basicFontSize: 16px;
+$basicFontColor: #2b2727;
+$basicFontFamily: "Share Tech";
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   font-family: $basicFontFamily;
+   font-size: $basicFontSize;
+   color: $basicFontColor;
+}
+
+@import "countdown_timer";

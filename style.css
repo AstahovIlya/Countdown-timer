@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Share Tech";
+  font-size: 16px;
+  color: #2b2727;
+}
+
+.countdown-timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  gap: 1em;
+  width: 100%;
+  padding: 20px 0;
+}
+.countdown-timer__dial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.countdown-timer__time {
+  font-size: 2em;
+}
+.countdown-timer__unit-time {
+  line-height: 120%;
+}
+
+.flip-cards {
+  background-color: #24475b;
+  color: #f2f2f2;
+}
+.flip-cards__dial {
+  position: relative;
+}
+.flip-cards__decoration {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  left: 50%;
+  top: 48%;
+  transform: translateX(-50%);
+  background-color: #24475b;
+  z-index: 4;
+  transform-style: preserve-3d;
+  perspective: 4em;
+}
+.flip-cards__decoration span {
+  display: block;
+  background-color: #24475b;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 4;
+}
+.flip-cards__decoration span:nth-child(1) {
+  left: 0.17em;
+  top: -0.08em;
+}
+.flip-cards__decoration span:nth-child(2) {
+  right: 0.17em;
+  top: -0.08em;
+}
+.flip-cards__decoration span:nth-child(3) {
+  right: 0.17em;
+  top: 0.08em;
+}
+.flip-cards__decoration span:nth-child(4) {
+  left: 0.17em;
+  top: 0.08em;
+}
+.flip-cards__bottom-layer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.flip-cards__bottom-layer::before {
+  position: absolute;
+  content: "";
+  background-color: #1baa76;
+  left: 0;
+  width: 100%;
+  height: calc(50% - 1.35px);
+}
+.flip-cards__bottom-layer::before {
+  top: 0;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+}
+.flip-cards__time {
+  position: relative;
+  width: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  perspective: 4em;
+}
+.flip-cards__time span {
+  position: relative;
+  z-index: 3;
+}
+.flip-cards__time span::before, .flip-cards__time span::after {
+  position: absolute;
+  content: "";
+  background-color: #24475b;
+  border-radius: 50%;
+  width: 0.13em;
+  height: 0.13em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.flip-cards__time span::before {
+  left: -21%;
+}
+.flip-cards__time span::after {
+  right: -21%;
+}
+.flip-cards__time::before, .flip-cards__time::after {
+  position: absolute;
+  content: "";
+  background-color: #1baa76;
+  left: 0;
+  width: 100%;
+  height: calc(50% - 1.35px);
+}
+.flip-cards__time::before {
+  top: 0;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+  transform-origin: center bottom;
+  animation-fill-mode: both;
+}
+.flip-cards__time::after {
+  bottom: 0;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+._flip-animation::before {
+  animation: flip 0.5s linear;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0deg);
+    z-index: 2;
+  }
+  0%, 99% {
+    opacity: 0.99;
+  }
+  100% {
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+}
